@@ -1,28 +1,43 @@
-/******************************************************************************
+//
+//  main.c
+//  practice
+//
+//  Created by sai bharadwaj adapa on 04/03/20.
+//  Copyright © 2020 sai bharadwaj adapa. All rights reserved.
 
-                            Online C Compiler.
-                Code, Compile, Run and Debug C program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
 
 #include <stdio.h>
 
 int main()
-{  float cel,far;
-   printf("enter the temperature in celcius:");
-    scanf("%f",&cel);
-   
-   far=(cel*9/5)+32;
-   printf("the temperature in farenheit:%f",far);
-   
-   printf("enter the temperature in farenheit:");
-   scanf("%f",&far);
-   
-   cel=((far-32)*5/9);
-   
-   printf("the temperature in celsius:%f",cel);
-   
-
+{
+    int a[100],i,n,min=0,max=0;
+    printf("enter the size of array");
+    
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    min=a[0];
+    max=a[0];
+    for(i=0;i<n;i++)
+    {
+        if(min>a[i])
+        {
+            min=a[i];
+        }
+        
+    }
+    for(i=0;i<n;i++)
+    {
+        if(max<a[i])
+        {
+            max=a[i];
+        }
+    }
+    printf("the minimum value is %d\n",min);
+    printf("the maximum value is %d\n",max);
+    
+    
     return 0;
 }
